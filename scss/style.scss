@@ -1,0 +1,113 @@
+@import "../scss/_var.scss";
+@import "../scss/_mixin.scss";
+@import "../scss/_templates.scss";
+
+button {
+    background-color: transparent;
+    display: block;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+.body--lock {
+    overflow: hidden;
+}
+
+.phone-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: calc($widthContainer + 30px);
+    padding: 0px 15px 0px 15px;
+    margin: 0 auto;
+}
+
+.title {
+    @extend %StyleTextH2;
+    color: $ColorBlack;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    width: 140px;
+
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.phone {
+    @extend %StyleTextH5;
+    color: $ColorWhite;
+
+    transition: color 0.5s;
+
+    @media (min-width: 769px) {
+        &:hover {
+            color: $ColorYellow;
+        }
+    }
+
+    @media (max-width: 1110px) {
+        & {
+            display: none;
+        }
+    }
+}
+
+.wrapper::after {
+    content: "";
+    background: rgba($ColorBlack, $alpha: 0.5) url("../globalImages/loader.svg") center no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3000;
+}
+
+.wrapper.loading-body::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.animation-active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.animation-disable {
+    transform: translate(0, -50px);
+    opacity: 0;
+}
+
+
+@import "../block/popups/scss/_popups.scss";
+
+@import "../block/header/scss/_header.scss";
+
+@import "../block/burger/scss/_burger.scss";
+
+@import "../block/main-page/scss/_main-page.scss";
+
+@import "../block/about-us/scss/_about-us.scss";
+
+@import "../block/merit/scss/_merit.scss";
+
+@import "../block/services/scss/_services.scss";
+
+@import "../block/partners/scss/_partners.scss";
+
+@import "../block/how-work/scss/_how-work.scss";
+
+@import "../block/footer/scss/_footer.scss"

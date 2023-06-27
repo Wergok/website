@@ -1,0 +1,62 @@
+.merit {
+    padding: 0px 0px 100px 0px;
+
+    @media (max-width: 1024px) {
+
+        & {
+            padding: 0px 0px 60px 0px;
+
+        }
+    }
+
+    &__wrapper {
+        background-color: rgba($ColorBlack, $alpha: 0.1);
+        box-shadow: rgba($ColorBlack, $alpha: 0.2) 5px 5px 15px;
+        border-radius: 10px;
+        padding: 30px 0px 30px 0px;
+    }
+
+    &__title {
+        margin: 0px 0px 20px 0px;
+        transition: all .9s;
+    }
+
+    &__subtitle {
+        font-family: $mainFont;
+        font-size: rem(24);
+        font-weight: 700;
+        line-height: interest(32, 24);
+        margin: 0px 0px 45px 0px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__list-item {
+        flex: 0 1 50%;
+
+        @media (max-width: 768px) {
+
+            & {
+                flex: 0 1 100%;
+            }
+
+        }
+    }
+
+    &__list-text {
+        font-family: $mainFont;
+        font-size: rem(24);
+        font-weight: 400;
+        line-height: interest(28, 24);
+        padding: 20px 15px 20px 15px;
+        transition: all 0.9s;
+
+        & span {
+            font-weight: 500;
+            color: $ColorGreen;
+        }
+    }
+}

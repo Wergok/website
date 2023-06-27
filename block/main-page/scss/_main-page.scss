@@ -1,0 +1,133 @@
+.main-page {
+    position: relative;
+    padding: 100px 0px 0px 0px;
+
+    &__wrapper-background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(30.56% 76.04% at 74.58% 0%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 1;
+        padding: 128px 20% 192px 15px;
+
+        @media (max-width: 1025px) {
+
+            & {
+                padding: 90px 20% 130px 15px;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            & {
+                padding: 90px 15px 130px 15px;
+            }
+
+        }
+    }
+
+    &__title {
+        @extend %StyleTextH1;
+        color: $ColorWhite;
+        margin: 0px 0px 70px 0px;
+
+        @media (max-width: 950px) {
+
+            & {
+                font-size: 2.5rem;
+            }
+
+        }
+
+        @media (max-width: 769px) {
+
+            & {
+                margin: 0px 0px 45px 0px;
+                font-size: 2rem;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            & {
+                font-size: 1.5rem;
+            }
+
+        }
+    }
+
+    &__text {
+        @extend %StyleTextH4;
+        color: $ColorWhite;
+        margin: 0px 0px 70px 0px;
+
+        @media (max-width: 769px) {
+
+            & {
+                font-size: 1.3rem;
+            }
+
+        }
+
+        @media (max-width: 573px) {
+
+            & {
+                font-size: 1rem;
+            }
+
+        }
+    }
+
+    &__buttons-box {
+        display: flex;
+        align-content: stretch;
+        flex-wrap: wrap;
+
+        @media (max-width: 635px) {
+
+            & {
+                flex-direction: column;
+            }
+
+        }
+    }
+
+    &__button {
+        width: 234px;
+        padding: 16px 32px 16px 32px;
+        background-color: $ColorYellow;
+        border-radius: 12px;
+        text-transform: uppercase;
+        @extend %StyleTextH5;
+
+        &:not(:last-child) {
+            margin: 0px 25px 0px 0px;
+        }
+
+        @media (max-width: 635px) {
+
+            &:not(:last-child) {
+                margin: 0px 0px 20px 0px;
+            }
+
+        }
+    }
+}

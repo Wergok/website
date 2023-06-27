@@ -1,0 +1,170 @@
+.footer {
+    padding: 25px 0px 25px 0px;
+    background-color: $ColorBlack;
+    box-shadow: rgba($ColorBlack, $alpha: 0.5) -10px 0px 10px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 0px 25px 0px;
+        border-bottom: 1px solid $ColorWhite;
+
+        @media (max-width: 768px) {
+
+            & {
+                flex-direction: column;
+            }
+
+        }
+    }
+
+    &__information {
+
+        @media (max-width: 768px) {
+
+            & {
+                text-align: center;
+                margin: 0px 0px 25px 0px;
+            }
+
+        }
+    }
+
+    &__address {
+        @extend %StyleTextBody1;
+        color: $ColorWhite;
+    }
+
+    &__timetable {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__unp {
+        @extend %StyleTextBody1;
+        color: $ColorWhite;
+        font-size: 0.7rem;
+    }
+
+    &__email {
+        @extend %StyleTextBody1;
+        color: $ColorWhite;
+        font-size: 0.7rem;
+    }
+
+    &__time {
+        @extend %StyleTextBody1;
+        color: $ColorWhite;
+        font-size: 0.7rem;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+
+            & {
+                margin: 0px 0px 25px 0px;
+                flex-direction: row;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            & {
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+    }
+
+    &__link {
+        transition: color .5s;
+        @extend %StyleTextBody1;
+        color: $ColorWhite;
+
+        @media (min-width: 768px) {
+
+            &:hover {
+                color: $ColorYellow;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+
+            &:not(:last-child) {
+                margin: 0px 15px 0px 0px;
+            }
+
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin: 0px 10px 0px 0px;
+    }
+
+    &__image {
+        width: 38px;
+        height: 38px;
+    }
+
+    &__slogan {
+        @extend %StyleTextH4;
+        color: $ColorGreen;
+        margin: 25px 0px 25px 0px;
+        text-align: center;
+
+        @media (max-width: 769px) {
+
+            & {
+                font-size: 1.3rem;
+            }
+
+        }
+
+        @media (max-width: 602px) {
+
+            & {
+                font-size: 1rem;
+            }
+
+        }
+
+        & span {
+            color: $ColorYellow;
+        }
+    }
+
+    & &__phone-box {
+        flex-direction: row;
+        justify-content: center;
+
+        & .phone:not(:last-child) {
+            margin: 0px 25px 0px 0px;
+        }
+
+        @media (max-width: 1110px) {
+            & .phone {
+                display: block;
+            }
+        }
+
+        @media (max-width: 433px) {
+        
+            & {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            & .phone:not(:last-child) {
+                margin: 0px 0px 5px 0px;
+            }
+        
+        }
+    }
+}
