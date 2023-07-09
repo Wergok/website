@@ -91,6 +91,17 @@ button {
     opacity: 0;
 }
 
+.new-icon {
+    position: absolute;
+    @extend %StyleTextLabel;
+    text-transform: uppercase;
+    color: $ColorYellow;
+    top: -50%;
+    right: 50%;
+    transform: translate(50%, 35%);
+    letter-spacing: 0.1em;
+}
+
 
 @import "../block/popups/scss/_popups.scss";
 

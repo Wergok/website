@@ -90,6 +90,7 @@
         @extend %StyleTextH5;
         color: $ColorWhite;
         transition: color .5s;
+        position: relative;
 
 
         @media (min-width: 769px) {
