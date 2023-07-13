@@ -90,28 +90,14 @@
         @media (max-width: 573px) {
 
             & {
-                font-size: 1rem;
-            }
-
-        }
-    }
-
-    &__buttons-box {
-        display: flex;
-        align-content: stretch;
-        flex-wrap: wrap;
-
-        @media (max-width: 635px) {
-
-            & {
-                flex-direction: column;
+                font-size: 1.1rem;
             }
 
         }
     }
 
     &__button {
-        width: 234px;
+        min-width: 234px;
         padding: 16px 32px 16px 32px;
         background-color: $ColorYellow;
         border-radius: 12px;

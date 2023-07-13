@@ -55,12 +55,6 @@ button {
             color: $ColorYellow;
         }
     }
-
-    @media (max-width: 1110px) {
-        & {
-            display: none;
-        }
-    }
 }
 
 .wrapper::after {
