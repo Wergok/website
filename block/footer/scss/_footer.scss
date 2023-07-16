@@ -31,16 +31,6 @@
         }
     }
 
-    &__address {
-        @extend %StyleTextBody1;
-        color: $ColorWhite;
-    }
-
-    &__timetable {
-        display: flex;
-        flex-direction: column;
-    }
-
     &__unp {
         @extend %StyleTextBody1;
         color: $ColorWhite;
